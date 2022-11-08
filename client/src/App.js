@@ -8,6 +8,17 @@ import { useDispatch } from 'react-redux';
 import { logout, userCurrent } from './js/userSlice/userSlice';
 import Profil from './components/Profil';
 import PrivateRoute from './routes/PrivateRoute';
+import Footer from './components/footer/Footer';
+import Navbar from './components/navbar/Navbar';
+import MinDisc from './components/TopDisc/MinDisc';
+import UserTopDisc from './components/user/TopDiscUser';
+import Home from './components/view/home/Home';
+import UserName from './components/user/UserName';
+import TopLogin from './components/combination/TopLogin'
+
+
+
+
 
 
 function App() {
@@ -23,26 +34,33 @@ const navigate=useNavigate();
 },[])
   return (
     <div className="App">
-      <div className='header'>
         <header>
-          <h1> RED MAMBA</h1>
           {isAuth?<button onClick={()=>{dispatch(logout());
           navigate("/");
           }}>logout</button>:null}
         </header>
-      <Routes>
-        <Route  path="/" element={<Register/>}/>
-        <Route  path="/login" element={<Login/>} />
 
+
+        <Navbar />
+
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/userName" element={<UserName />} />
+  <Route path="/userinformation" element={<UserTopDisc/>} />
+  <Route path="submit" element={ <TopLogin />} />
+  <Route  path="/register" element={<Register/>}/>
+        <Route  path="/login" element={<Login/>} />
+        
         <Route element={<PrivateRoute/>} >
         <Route   path="/profil" element={<Profil/>} />
         </Route> {""}
 
-  
-      </Routes>
+</Routes>
+<MinDisc />
+<Footer />
+
 
       </div>
-    </div>
   );
 }
 

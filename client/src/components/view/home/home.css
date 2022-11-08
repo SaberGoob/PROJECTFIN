@@ -1,0 +1,93 @@
+.header{
+    background-image: url("./headerimage.jpg");
+    background-size: 100%;
+    background-color: #cccccc;
+    width: 100%;
+    height: 500px;
+}
+
+.header h1{
+    margin-top: 50px;
+    display: inline-block;
+    font-family: 'SupDelivery', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 56px;
+    letter-spacing: 2.27px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #1e1e1e;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+
+ }
+ .movement h3 {
+    font-size: 25px;
+ }
+ .movement h4{
+margin-top: 20px;
+margin-bottom: 4px; }
+
+ .movement{
+    width: 20%;
+    height: 30%;
+    background-color: #fff;
+    width: 368px;
+    height: 173px;
+    border-radius: 7px;
+    padding: 30px 28px 20px;
+    transition: all 0.5s linear;
+    font-family: 'SupDelivery', sans-serif;
+    letter-spacing: 2px;
+    color: #1e1e1e;
+    text-align: left;
+    position: relative;
+ }
+ .iconName{
+    display: flex;
+
+ }
+ .iconName img{
+    margin-left: 120px;
+    margin-top: -10px;
+    width: 20%;
+ }
+ .line{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 4px;
+    background-color: #000000;
+top: 107px;
+    bottom: 70px;
+    left:190px;
+
+ }
+ .movement button{
+    margin: 43px;
+margin-left: 58px;}
+
+.mov3{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+
+}
+
+.movement:hover {
+    box-shadow: inset 0 300px 0 0 #f0c52f;
+
+}
+.body{
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    justify-content: center;
+    margin-top: 100px;
+
+}
