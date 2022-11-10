@@ -16,11 +16,7 @@ company: {
     type: String,
   },
 
-  AtoB: {
-    type: String,
-  },
-
- weight: {
+  Adress: {
     type: String,
   },
 
@@ -36,7 +32,7 @@ company: {
     type: String,
   },
 
-  van: {
+  methode: {
     type: String,
   },
   message: {

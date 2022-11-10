@@ -24,7 +24,7 @@ ShipRouter.post("/add", async (req, res) => {
     }
   });
 
-ShipRouter.delete("/:id", async (req, res) => {
+ShipRouter.delete("delete/:id", async (req, res) => {
   try {
     let result = await Ship.findOneAndRemove({
       _id: req.params.id,
@@ -36,7 +36,7 @@ ShipRouter.delete("/:id", async (req, res) => {
   }
 });
 
-ShipRouter.put("/up/:id", async (req, res) => {
+ShipRouter.put("/update/:id", async (req, res) => {
     try {
       let result = await Ship.findByIdAndUpdate(
         {

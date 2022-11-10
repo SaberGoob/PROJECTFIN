@@ -1,12 +1,12 @@
 import React from 'react';
-import Submit from '../Sumbit';
+import Ship from '../Ship';
 import TopDisc from '../TopDisc/TopDisc';
 
 const TopLogin = () => {
   return (
     <div>
 <TopDisc/>
-<Submit/>
+<Ship/>
     
     </div>
   )

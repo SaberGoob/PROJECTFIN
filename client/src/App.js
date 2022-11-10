@@ -6,7 +6,7 @@ import Login from './components/Login';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { logout, userCurrent } from './js/userSlice/userSlice';
-import Profil from './components/Profil';
+import Profil from './components/profil/Profil';
 import PrivateRoute from './routes/PrivateRoute';
 import Footer from './components/footer/Footer';
 import Navbar from './components/navbar/Navbar';

@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios';
 
 
-
 export const userRegister = createAsyncThunk("user/register", async (user)=>{
     try {
         let response = await axios.post(

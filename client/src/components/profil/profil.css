@@ -1,0 +1,64 @@
+.profil{
+    width: 75%;
+    display: flex;
+    margin-left: 250px;
+margin-right: auto;
+
+
+
+
+}
+
+.profil_colum{
+width: 35%;
+margin-left: auto;
+margin-right: auto;
+border-color: black;
+border-end-start-radius: 10;
+border-style: solid;
+padding: 30px;
+margin: 20px;
+
+}
+
+
+.profil_colum img {
+width: 10%;
+
+}
+
+
+.ship_colum{
+    width: 65%;
+    border-end-start-radius: 10;
+border-style: solid;
+padding: 1px;
+margin: 20px;
+justify-content: space-between;
+
+
+}
+
+
+.ship_colum p {
+
+}
+
+
+
+.infoOrder{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-color: black;
+    padding: 30px;
+border-end-start-radius: 10;
+border-style: solid;
+
+}
+
+
+.userInformation{
+display: flex;
+flex-direction: column;
+}

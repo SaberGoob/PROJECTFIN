@@ -1,0 +1,10 @@
+.pop{
+    display: flex;
+flex-wrap: wrap;
+
+}
+
+.pop p{
+  padding: 4px;
+
+}

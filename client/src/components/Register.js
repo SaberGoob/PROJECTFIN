@@ -15,6 +15,7 @@ const Register = () => {
     let navigate = useNavigate();
   return (
     <div>   <div className="wrapper">
+      
     <div className="form-signin" onSubmit={(e) => e.preventDefault()}>       
       <h2 className="form-signin-heading">Please Register</h2>
       <input 
