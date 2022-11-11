@@ -15,6 +15,7 @@ import UserTopDisc from './components/user/TopDiscUser';
 import Home from './components/view/home/Home';
 import UserName from './components/user/UserName';
 import TopLogin from './components/combination/TopLogin'
+import { allShip } from './js/userSlice/shipSlice';
 
 
 
@@ -31,6 +32,7 @@ const navigate=useNavigate();
     if (isAuth) {
   dispatch(userCurrent());
   }
+  dispatch(allShip())
 },[])
   return (
     <div className="App">

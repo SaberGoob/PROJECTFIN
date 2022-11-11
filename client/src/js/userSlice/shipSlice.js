@@ -70,7 +70,7 @@ export const addShip = createAsyncThunk("ship/add",async(ship)=> {
 // get all ship
 export const allShip = createAsyncThunk("ship/all", async () => {
     try {
-      let response = await axios.get("http://localhost:5000/ship/Ship");
+      let response = await axios.get("http://localhost:5000/ship/all");
       return await response.data;
     } catch (error) {
       console.log(error);
@@ -133,7 +133,7 @@ const initialState = {
           },
           [allShip.fulfilled]: (state, action) => {
             state.status = "success";
-            state.ship = action.payload?.searchedShip;
+            state.ship = action.payload?.result;
           },
           [allShip.rejected]: (state) => {
             state.status = "failed";

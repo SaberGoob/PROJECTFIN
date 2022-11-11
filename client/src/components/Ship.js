@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./ship.css";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { addShip } from '../js/userSlice/shipSlice';
 
 
 
 const Add = () => {
+
+  const user = useSelector ((state) => state.user?.user);
 
   const [add, setShip] = useState({
     company:"",
@@ -17,6 +19,8 @@ const Add = () => {
     methode:"",
     demensions:"",
     material:"",
+    userId:user?._id,
+
 
 
 

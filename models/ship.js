@@ -8,6 +8,9 @@ const ShipSchema = new Schema({
 //   email: {
 //     type: String,
 //   },
+userId: {
+  type:String,
+},
 company: {
     type: String,
   },
