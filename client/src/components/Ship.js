@@ -6,10 +6,12 @@ import { addShip } from '../js/userSlice/shipSlice';
 
 
 
+
+
+
 const Add = () => {
 
   const user = useSelector ((state) => state.user?.user);
-
   const [add, setShip] = useState({
     company:"",
     phone:"",
@@ -88,7 +90,7 @@ const Add = () => {
           onChange={(e) => setShip({...add, company:e.target.value})}
         />
          <input
-          type="phone"
+          type="tel"
           name="name"
           placeholder="Phone Number"
           onChange={(e) => setShip({...add, phone:e.target.value})}
@@ -186,7 +188,10 @@ const Add = () => {
         dispatch(addShip(add));
         setTimeout(() => {
           navigate("/profil");
-        }, 400);
+        },600);
+        setTimeout(() => {
+          window.location.reload()
+        },600);
       }}
         >
           Submit

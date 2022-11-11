@@ -8,6 +8,7 @@ const ShipSchema = new Schema({
 //   email: {
 //     type: String,
 //   },
+
 userId: {
   type:String,
 },
@@ -41,5 +42,5 @@ company: {
   message: {
     type: String,
   },
-});
+},{timestamps:true});
 module.exports = mongoose.model("Ship", ShipSchema);

@@ -6,8 +6,7 @@ import PopUpOrder from './PopUpOrder';
 
 const Profile = () => {
   const user = useSelector ((state) => state.user?.user);
-  const ship = useSelector(state=>state.ship?.ship)
-  console.log(ship)
+  const ships = useSelector(state=>state.ship?.ship)
   
 
   return (
@@ -18,9 +17,9 @@ const Profile = () => {
       <img  className='logoTop' src={icon_profil} alt='logo'/> 
       <h3>User Information</h3>
       <div className='userInformation'>
-        <p2>Name:Saber</p2>
-        <p2>Last name:Goob</p2>
-        <p2>Email:saber.goob14@gmail.com</p2>
+        <p2>Name:{user?.name}</p2>
+        <p2>Last name:{user?.lastname}</p2>
+        <p2>Email:{user?.email}</p2>
         <p1>Do you Want to change your Password?</p1>
         <button>Update</button>
 
@@ -28,16 +27,18 @@ const Profile = () => {
        
       </div>
 
-
-      <div className='ship_colum'>
-       <div className='infoOrder'>
-        <p1><b>Company: {ship?.company}</b></p1>
-        <p1>Phone: {ship?.phone}</p1>
-        <p1>Date: 20/21/2019</p1>
-        <p1>Etat: Pending</p1>
-       </div>
-       <PopUpOrder/>
-      </div>
+    {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=>
+    <div className='ship_colum'>
+    <div className='infoOrder'>
+     <p1><b>Company: {ship?.company}</b></p1>
+     <p1>Phone: {ship?.phone}</p1>
+     <p1>Date: 20/21/2019</p1>
+     <p1>Etat: Pending</p1>
+    </div>
+    <PopUpOrder/>
+   </div>
+    )}
+      
       
       
       
