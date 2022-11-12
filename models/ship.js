@@ -9,6 +9,10 @@ const ShipSchema = new Schema({
 //     type: String,
 //   },
 
+Etat:{
+type:String,
+},
+
 userId: {
   type:String,
 },

@@ -1,5 +1,12 @@
+.profilship{
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    margin-left: -85px;
+}
+
 .profil{
-    width: 75%;
+    width: 100%;
     display: flex;
     margin-left: 250px;
 margin-right: auto;
@@ -8,9 +15,12 @@ margin-right: auto;
 
 
 }
+.hide{
+    /* display: none; */
+}
 
 .profil_colum{
-width: 35%;
+width: 20%;
 margin-left: auto;
 margin-right: auto;
 border-color: black;
@@ -18,6 +28,7 @@ border-end-start-radius: 10;
 border-style: solid;
 padding: 30px;
 margin: 20px;
+height: 250px;
 
 }
 
@@ -29,7 +40,7 @@ width: 10%;
 
 
 .ship_colum{
-    width: 65%;
+    width: 70%;
     border-end-start-radius: 10;
 border-style: solid;
 padding: 1px;
@@ -40,7 +51,9 @@ justify-content: space-between;
 }
 
 
-.ship_colum p {
+.ship_colum{
+display: flex;
+flex-direction: column;
 
 }
 
@@ -61,4 +74,39 @@ border-style: solid;
 .userInformation{
 display: flex;
 flex-direction: column;
+}
+
+.shipcard{
+width: 90%;
+display: flex;
+flex-direction: column;
+}
+
+.popinformation{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.info4{
+    display: flex;
+    justify-content: space-between;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.popinformation button{
+width: 40%;
+margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.btn_profil{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    
+
 }

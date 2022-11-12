@@ -106,7 +106,6 @@ export const allShip = createAsyncThunk("ship/all", async () => {
 const initialState = {
     ship: null,
     status:null,
-    ship: null,
   }
   
   const ShipSlice = createSlice({

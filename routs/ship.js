@@ -24,9 +24,9 @@ ShipRouter.post("/add", async (req, res) => {
     }
   });
 
-ShipRouter.delete("delete/:id", async (req, res) => {
+ShipRouter.delete('delete/:id', async (req, res) => {
   try {
-    let result = await Ship.findOneAndRemove({
+    let result = await Ship.findByIdAndDelete({
       _id: req.params.id,
     });
     res.send({ msg: " delete Shipping Order" });
@@ -35,6 +35,19 @@ ShipRouter.delete("delete/:id", async (req, res) => {
     res.send({ msg: "fail" });
   }
 });
+
+// router.delete('/delete/:id',async (req,res) => {
+//   try {
+//       const result = await Annonce.findByIdAndDelete({ _id: req.params.id,});
+//       res.send({msg:"annonce deleted successfully"})
+//   } catch (error) {
+//       console.log(error);
+//       res.status(500).send({ msg: "can not delete the annonce"})
+      
+//   }
+// })
+
+
 
 ShipRouter.put("/update/:id", async (req, res) => {
     try {
