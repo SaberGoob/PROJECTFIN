@@ -24,11 +24,9 @@ ShipRouter.post("/add", async (req, res) => {
     }
   });
 
-ShipRouter.delete('delete/:id', async (req, res) => {
+ShipRouter.delete('/delete/:id', async (req, res) => {
   try {
-    let result = await Ship.findByIdAndDelete({
-      _id: req.params.id,
-    });
+    let result = await Ship.findByIdAndRemove( req.params.id);
     res.send({ msg: " delete Shipping Order" });
   } catch (error) {
     console.log(error);

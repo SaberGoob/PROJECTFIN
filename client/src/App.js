@@ -30,12 +30,12 @@ function App() {
 const navigate=useNavigate();
   const isAuth=localStorage.getItem("token");
    const dispatch = useDispatch ();
-//   useEffect(()=> {
-//     if (isAuth) {
-//   dispatch(userCurrent());
-//   }
-//   dispatch(allShip())
-// },[])
+  useEffect(()=> {
+    if (isAuth) {
+  dispatch(userCurrent());
+  }
+  dispatch(allShip())
+},[])
   return (
     <div className="App">
         <header>

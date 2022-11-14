@@ -23,19 +23,16 @@ userId: {
 },
 company: {
     type: String,
-    required: true,
 
   },
 
   phone: {
     type: String,
-    required: true,
 
   },
 
   Adress: {
     type: String,
-    required: true,
 
   },
 

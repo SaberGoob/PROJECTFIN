@@ -2,23 +2,25 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './profil.css';
 import { deleteShip } from '../../js/userSlice/shipSlice';
+import CardUpdate from './CardUpdate';
 
 const CardShip = ({ship}) => {
   const [show, setShow]= useState(false)
+  const [update, setUpdate] = useState(false)
   
   const dispatch =useDispatch()
       const [ping, setPing] = useState(false);
   
-  const handleDelete = (_id) => {
-    dispatch(deleteShip(_id));
+  const handleDelete = (id) => {
+    dispatch(deleteShip(id));
     setPing(!ping);
   };
 console.log(ship)
   return (
-    <div>
+   update ? <CardUpdate show={show} setShow={setShow} setUpdate={setUpdate} ship={ship}/> : <div>
   {/* {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=> */}
-    <div className='ship_colum'onClick={()=> setShow(!show)}>
-    <div className='infoOrder'>
+    <div className='ship_colum'>
+    <div className='infoOrder' onClick={()=> setShow(!show)}>
      <p1><b>Company: {ship?.company}</b></p1>
      <p1>Phone: {ship?.phone}</p1>
      <p1>Date: 20/21/2019</p1>
@@ -39,7 +41,7 @@ console.log(ship)
     <div className='btn_profil'>
      <button onClick={() => 
                 handleDelete(ship?._id) }>Delete</button>
-     <button>Update</button>
+     <button onClick={()=>setUpdate(true)}>Update</button>
      </div>
      </div>
    </div>

@@ -11,7 +11,6 @@ import { userCurrent } from '../../js/userSlice/userSlice';
 
 const Profile = () => {
   const user = useSelector ((state) => state.user?.user);
-const [show, setShow]= useState(false)
 const isAuth=localStorage.getItem("token");
 
 const dispatch =useDispatch()
@@ -57,10 +56,10 @@ const handleDelete = (_id) => {
       <div className='shipcard'>
       {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=>
       <div>
-      {/* <CardShip ship={ship}/> */}
-      <CardUpdate ship={ship}/>
+      <CardShip ship={ship}/>
+      
       </div>
-      )};
+      )}
       </div>
       </div>
 

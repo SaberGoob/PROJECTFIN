@@ -2,21 +2,27 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom'
 import './profil.css';
-import { deleteShip } from '../../js/userSlice/shipSlice';
+import { deleteShip, updateShip } from '../../js/userSlice/shipSlice';
 
-const CardUpdate = ({ship}) => {
-  const [show, setShow]= useState(false)
-  
+const CardUpdate = ({ship,show,setShow}) => {
 
+ 
     const [newShip, setNewShip] = useState({})
+    const dispatch = useDispatch()
+
+    const handleChange = (id) => {
+      dispatch(updateShip({ id, ship: newShip }));
+  
+  };
+
 
   console.log(ship.pickup)
 
   return (
     <div>
   {/* {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=> */}
-    <div className='ship_colum'onClick={()=> setShow(!show)}>
-    <div className='infoOrder'>
+    <div className='ship_colum'>
+    <div className='infoOrder'  onClick={()=> setShow(!show)}>
      
     <p1>Company:<input
       onChange={(e) => setNewShip({ ...newShip, company: e.target.value })} defaultValue={ship?.company}
@@ -28,10 +34,7 @@ const CardUpdate = ({ship}) => {
      
      /></p1>
      <p1>Date: 20/21/2019</p1>
-     <p1>Etat: <input
-      onChange={(e) => setNewShip({ ...newShip, etat: e.target.value })} defaultValue={ship?.etat}
-     
-     /></p1>
+     <p1>Etat: {ship?.etat}</p1>
     </div>
     {show?
     <div className='ship-section hide'>
@@ -65,7 +68,8 @@ const CardUpdate = ({ship}) => {
     <p>Date Pick Up: {ship?.pickup}</p>
     <div className='btn_profil'>
      <button>Delete</button>
-     <button>Update</button>
+     <button onClick={() =>
+      handleChange(ship?._id)} >Update</button>
      </div>
      </div>
    </div>
