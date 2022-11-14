@@ -13,19 +13,30 @@ Etat:{
 type:String,
 },
 
+pickup:{
+  type:String,
+  default:"Pending",
+},
+
 userId: {
   type:String,
 },
 company: {
     type: String,
+    required: true,
+
   },
 
   phone: {
     type: String,
+    required: true,
+
   },
 
   Adress: {
     type: String,
+    required: true,
+
   },
 
   material: {

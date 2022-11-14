@@ -16,6 +16,8 @@ import Home from './components/view/home/Home';
 import UserName from './components/user/UserName';
 import TopLogin from './components/combination/TopLogin'
 import { allShip } from './js/userSlice/shipSlice';
+import Admin from './components/admin/Admin'
+
 
 
 
@@ -27,13 +29,13 @@ function App() {
 
 const navigate=useNavigate();
   const isAuth=localStorage.getItem("token");
-  const dispatch = useDispatch ();
-  useEffect(()=> {
-    if (isAuth) {
-  dispatch(userCurrent());
-  }
-  dispatch(allShip())
-},[])
+   const dispatch = useDispatch ();
+//   useEffect(()=> {
+//     if (isAuth) {
+//   dispatch(userCurrent());
+//   }
+//   dispatch(allShip())
+// },[])
   return (
     <div className="App">
         <header>
@@ -50,6 +52,9 @@ const navigate=useNavigate();
   <Route path="/userName" element={<UserName />} />
   <Route path="/userinformation" element={<UserTopDisc/>} />
   <Route path="submit" element={ <TopLogin />} />
+  <Route path="admin" element={ <Admin />} />
+
+
   <Route  path="/register" element={<Register/>}/>
         <Route  path="/login" element={<Login/>} />
         
