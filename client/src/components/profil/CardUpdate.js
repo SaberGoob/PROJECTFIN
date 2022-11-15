@@ -6,7 +6,7 @@ import { deleteShip, updateShip } from '../../js/userSlice/shipSlice';
 
 const CardUpdate = ({ship,show,setShow}) => {
 
- 
+  const [ping, setPing] = useState(false);
     const [newShip, setNewShip] = useState({})
     const dispatch = useDispatch()
 
@@ -14,6 +14,7 @@ const CardUpdate = ({ship,show,setShow}) => {
       dispatch(updateShip({ id, ship: newShip }));
   
   };
+  
 
 
   console.log(ship.pickup)

@@ -1,0 +1,11 @@
+.userAdminName{
+    padding: 5px;
+    border: 10px;
+    text-align: center;
+    color: black;
+    background-color: #f0c52f;
+    margin: 4px;
+    font-size:large;
+    font-weight: 400;
+    font-family:'Times New Roman', Times, serif;
+};

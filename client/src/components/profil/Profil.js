@@ -10,25 +10,25 @@ import CardUpdate from './CardUpdate';
 import { userCurrent } from '../../js/userSlice/userSlice';
 
 const Profile = () => {
-  const user = useSelector ((state) => state.user?.user);
-const isAuth=localStorage.getItem("token");
+  const user = useSelector((state) => state.user?.user);
+  const isAuth = localStorage.getItem("token");
 
-const dispatch =useDispatch()
-  useEffect(()=> {
-    if (isAuth) {
-  dispatch(userCurrent());
-  }
-  dispatch(allShip())
-},[])
-const ships = useSelector(state=>state.ship?.ship)
-console.log(ships)
+  const dispatch = useDispatch()
+  // useEffect(() => {
+  //   if (isAuth) {
+  //     dispatch(userCurrent());
+  //   }
+  //   dispatch(allShip())
+  // }, [])
+  const ships = useSelector(state => state.ship?.ship)
+  console.log(ships)
 
-    const [ping, setPing] = useState(false);
+  const [ping, setPing] = useState(false);
 
-const handleDelete = (_id) => {
-  dispatch(deleteShip(_id));
-  setPing(!ping);
-};
+  const handleDelete = (_id) => {
+    dispatch(deleteShip(_id));
+    setPing(!ping);
+  };
 
   // let usersSection = document.querySelector(".ship-section");
   // function showHideUsers(){
@@ -37,33 +37,33 @@ const handleDelete = (_id) => {
 
   return (
     <div className='profilship'>
-    <div className='profil'>
+      <div className='profil'>
         {/* <h1>Company {ship ? ship.company: <h1>Loading...</h1>} </h1> */}
-      {/* <h1>this my profile {ship? ship.company: <h1>Loading...</h1>}</h1>  */}
-      <div className='profil_colum'>
-      <img  className='logoTop' src={icon_profil} alt='logo'/> 
-      <h3>User Information</h3>
-      <div className='userInformation'>
-        <p2>Name:{user?.name}</p2>
-        <p2>Last name:{user?.lastname}</p2>
-        <p2>Email:{user?.email}</p2>
-        <p1>Do you Want to change your Password?</p1>
-        <button>Update</button>
+        {/* <h1>this my profile {ship? ship.company: <h1>Loading...</h1>}</h1>  */}
+        <div className='profil_colum'>
+          <img className='logoTop' src={icon_profil} alt='logo' />
+          <h3>User Information</h3>
+          <div className='userInformation'>
+            <p2>Name:{user?.name}</p2>
+            <p2>Last name:{user?.lastname}</p2>
+            <p2>Email:{user?.email}</p2>
+            <p1>Do you Want to change your Password?</p1>
+            <button>Update</button>
 
-      </div>
-       
-      </div>
-      <div className='shipcard'>
-      {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=>
-      <div>
-      <CardShip ship={ship}/>
-      
-      </div>
-      )}
-      </div>
+          </div>
+
+        </div>
+        <div className='shipcard'>
+          {ships?.filter(el => el?.userId === user?._id).map((ship, i) =>
+            <div>
+              <CardShip ship={ship} />
+
+            </div>
+          )}
+        </div>
       </div>
 
-      </div>
+    </div>
   )
 }
 

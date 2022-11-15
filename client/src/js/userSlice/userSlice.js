@@ -40,9 +40,32 @@ export const userCurrent = createAsyncThunk("user/Current", async ()=>{
     }
 });
 
+ // get all users
+ export const getUser = createAsyncThunk("user/getall/", async () => {
+    try {
+      let response = await axios.get("http://localhost:5000/user/all");
+      return await response.data;
+    } catch (error) {
+      console.log(error);
+    }
+  });
+
+  // delete user
+  export const deleteUser = createAsyncThunk("user/delete/", async (id) => {
+     
+    try {
+   let response = await axios.delete(`http://localhost:5000/user/delete/${id}`);
+   return await response.data;
+ } catch (error) {
+   console.log(error);
+ }
+});
+
+
 const initialState={
     user:null,
     status:null,
+    users:[],
 };
 export const userSlice = createSlice({
   name: 'user',
@@ -90,6 +113,30 @@ export const userSlice = createSlice({
     [userCurrent.rejected]:(state) => {
         state.status = "fail";
     },
+
+    // get all users
+    [getUser.fulfilled]: (state, action) => {
+        state.status = "success";
+        state.users = action.payload?.result;
+      },
+      [getUser.rejected]: (state) => {
+        state.status = "failed";
+      },
+      [getUser.pending]: (state) => {
+        state.status = "pending";
+      },
+       // delete user
+       [deleteUser.fulfilled]: (state, action) => {
+        state.status = "success";
+        state.searchedUser = action.payload?.user;
+      },
+      [deleteUser.rejected]: (state) => {
+        state.status = "failed";
+      },
+      [deleteUser.pending]: (state) => {
+        state.status = "pending";
+      },
+
   },
 })
 

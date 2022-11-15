@@ -105,7 +105,7 @@ const Add = () => {
           onChange={(e) => setShip({...add, adress:e.target.value})}
         />
           <input
-          type="number"
+          type="text"
           name="weight"
            placeholder="Weight (Kg)"
           onChange={(e) => setShip({...add, weight:e.target.value})}

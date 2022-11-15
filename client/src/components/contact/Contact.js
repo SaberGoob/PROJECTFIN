@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./contact.css";
 import FormInput from "./FormInput";
 
@@ -60,7 +61,7 @@ const Contact = () => {
             onChange={onChange}
           />
         ))}
-        <button id='contactus1'>Submit</button>
+        <Link to='./userinformation'><button id='contactus1'>Submit</button></Link>       
       </form>
     </div>
   );

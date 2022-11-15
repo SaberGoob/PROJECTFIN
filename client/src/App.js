@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {Routes,Route, Navigate,useNavigate} from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Register from './components/Register';
 import Login from './components/Login';
 import { useEffect } from 'react';
@@ -19,55 +19,51 @@ import { allShip } from './js/userSlice/shipSlice';
 import Admin from './components/admin/Admin'
 
 
-
-
-
-
-
 function App() {
-   
 
-const navigate=useNavigate();
-  const isAuth=localStorage.getItem("token");
-   const dispatch = useDispatch ();
-  useEffect(()=> {
+
+  const navigate = useNavigate();
+  const isAuth = localStorage.getItem("token");
+  const dispatch = useDispatch();
+  useEffect(() => {
     if (isAuth) {
-  dispatch(userCurrent());
-  }
-  dispatch(allShip())
-},[])
+      dispatch(userCurrent());
+    }
+    dispatch(allShip())
+  }, [])
   return (
     <div className="App">
-        <header>
-          {isAuth?<button onClick={()=>{dispatch(logout());
+      <header>
+        {isAuth ? <button onClick={() => {
+          dispatch(logout());
           navigate("/");
-          }}>logout</button>:null}
-        </header>
+        }}>logout</button> : null}
+      </header>
 
 
-        <Navbar />
+      <Navbar />
 
-<Routes>
-  <Route path="/" element={<Home />} />
-  <Route path="/userName" element={<UserName />} />
-  <Route path="/userinformation" element={<UserTopDisc/>} />
-  <Route path="submit" element={ <TopLogin />} />
-  <Route path="admin" element={ <Admin />} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/userName" element={<UserName />} />
+        <Route path="/userinformation" element={<UserTopDisc />} />
+        <Route path="submit" element={<TopLogin />} />
+        <Route path="admin" element={<Admin />} />
 
 
-  <Route  path="/register" element={<Register/>}/>
-        <Route  path="/login" element={<Login/>} />
-        
-        <Route element={<PrivateRoute/>} >
-        <Route   path="/profil" element={<Profil/>} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<Login />} />
+
+        <Route element={<PrivateRoute />} >
+          <Route path="/profil" element={<Profil />} />
         </Route> {""}
 
-</Routes>
-<MinDisc />
-<Footer />
+      </Routes>
+      <MinDisc />
+      <Footer />
 
 
-      </div>
+    </div>
   );
 }
 
