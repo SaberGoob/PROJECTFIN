@@ -18,6 +18,7 @@ import TopLogin from './components/combination/TopLogin'
 import { allShip } from './js/userSlice/shipSlice';
 import Admin from './components/admin/Admin'
 import AdminRoute from './routes/AdminRoute';
+import About from './page/About';
 
 
 function App() {
@@ -43,6 +44,10 @@ function App() {
         <Route path="/userName" element={<UserName />} />
         <Route path="/userinformation" element={<UserTopDisc />} />
         <Route path="submit" element={<TopLogin />} />
+
+
+        <Route path="about" element={<About />} />
+
 
 
 

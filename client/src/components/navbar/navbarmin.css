@@ -43,3 +43,8 @@
         color: black;
     }
     
+
+    .navbarmenu a{
+        color: white;
+        text-decoration: none;
+    }

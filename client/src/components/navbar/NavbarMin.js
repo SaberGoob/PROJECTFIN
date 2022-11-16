@@ -1,6 +1,7 @@
 import React from 'react'
 import './navbarmin.css'
 import search from '../images/search.svg'
+import { Link } from 'react-router-dom'
 
 
 
@@ -10,9 +11,9 @@ const NavbarMin = () => {
     <div className=" navBarMin">
 
 
-<ul>
-    <il>HOME</il>
-    <il>ABOUT US</il>
+<ul className='navbarmenu'>
+    <Link to='/'><il >HOME</il></Link>
+    <Link to='/about'><il>ABOUT US</il></Link>
     <il>TRANSPORTATION SERVICES</il>
     <il>LOAD TRACKING</il>
     <il>SHIP WITH US</il>
