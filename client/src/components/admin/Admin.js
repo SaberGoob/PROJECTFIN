@@ -6,7 +6,7 @@ import { allShip, deleteShip } from '../../js/userSlice/shipSlice';
 
 
 import { deleteUser, getUser, userCurrent } from '../../js/userSlice/userSlice';
-import CardShip from '../profil/CardShip';
+import CardShipAdmin from './CardShipAdmin';
 import UserCard from './UserCard';
 
 const Profile = () => {
@@ -69,7 +69,7 @@ const Profile = () => {
       
           {ships?.filter(el => el?.userId === selectedUser?._id).map((ship, i) =>
             <div>
-              <CardShip ship={ship} />
+              <CardShipAdmin ship={ship} />
 
             </div>
           )}

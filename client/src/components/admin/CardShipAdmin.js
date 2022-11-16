@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './profil.css';
 import { deleteShip } from '../../js/userSlice/shipSlice';
-import CardUpdate from './CardUpdate';
+import CardUpdateAdmin from './CardUpdateAdmin';
 
 const CardShip = ({ship}) => {
   const [show, setShow]= useState(false)
@@ -17,7 +17,7 @@ const CardShip = ({ship}) => {
   };
 console.log(ship)
   return (
-   update ? <CardUpdate show={show} setShow={setShow} setUpdate={setUpdate} ship={ship}/> : <div>
+   update ? <CardUpdateAdmin show={show} setShow={setShow} setUpdate={setUpdate} ship={ship}/> : <div>
   {/* {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=> */}
     <div className='ship_colum'>
     <div className='infoOrder' onClick={()=> setShow(!show)}>

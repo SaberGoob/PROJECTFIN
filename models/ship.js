@@ -9,8 +9,10 @@ const ShipSchema = new Schema({
 //     type: String,
 //   },
 
-Etat:{
+etat:{
 type:String,
+default:"Pending",
+
 },
 
 pickup:{

@@ -109,7 +109,7 @@ router.get("/all", async (req, res) => {
 });
 
 //update users
-router.put("/:id", async (req, res) => {
+router.put("/update/:id", async (req, res) => {
   try {
     let result = await User.findByIdAndUpdate(
       { _id: req.params.id },

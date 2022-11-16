@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import CardShip from './CardShip';
 import CardUpdate from './CardUpdate';
 
+import CradUser from './CardUser';
 import { userCurrent } from '../../js/userSlice/userSlice';
 
 const Profile = () => {
@@ -43,12 +44,14 @@ const Profile = () => {
         <div className='profil_colum'>
           <img className='logoTop' src={icon_profil} alt='logo' />
           <h3>User Information</h3>
-          <div className='userInformation'>
-            <p2>Name:{user?.name}</p2>
+          <div >
+            {/* <p2>Name:{user?.name}</p2>
             <p2>Last name:{user?.lastname}</p2>
             <p2>Email:{user?.email}</p2>
             <p1>Do you Want to change your Password?</p1>
-            <button>Update</button>
+            <button>Update</button> */}
+
+            <CradUser user={user}/>
 
           </div>
 

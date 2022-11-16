@@ -11,14 +11,14 @@ const NavbarMin = () => {
 
 
 <ul>
+    <il>HOME</il>
+    <il>ABOUT US</il>
     <il>TRANSPORTATION SERVICES</il>
-    <il>INDUSTRIES</il>
     <il>LOAD TRACKING</il>
-    <il>CARRIERS</il>
-    <il>LOAD TRACKING</il>
-    <il>SHIPPERS</il>
-    <il>AGENT PROGRAM</il>
-    <il><img src={search} alt="search" className='searchIcon'/></il>
+    <il>SHIP WITH US</il>
+    <il>DRIVE FOR US</il>
+    <il>FAQs</il>
+    {/* <il><img src={search} alt="search" className='searchIcon'/></il> */}
 
 </ul>
  

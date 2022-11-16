@@ -61,6 +61,18 @@ export const userCurrent = createAsyncThunk("user/Current", async ()=>{
  }
 });
 
+  // Update user
+  export const updateUser = createAsyncThunk("user/update/", async ({id,user}) => {
+     
+    try {
+   let response = await axios.put(`http://localhost:5000/user/update/${id}`,user);
+   return await response.data;
+ } catch (error) {
+   console.log(error);
+ }
+});
+
+
 
 const initialState={
     user:null,
@@ -72,7 +84,7 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     logout:(state,action) => {
-        SVGMarkerElement.user = null;
+        state.user = null;
         localStorage.removeItem("token");
     }
   },

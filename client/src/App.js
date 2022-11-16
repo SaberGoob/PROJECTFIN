@@ -17,6 +17,7 @@ import UserName from './components/user/UserName';
 import TopLogin from './components/combination/TopLogin'
 import { allShip } from './js/userSlice/shipSlice';
 import Admin from './components/admin/Admin'
+import AdminRoute from './routes/AdminRoute';
 
 
 function App() {
@@ -33,12 +34,6 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <header>
-        {isAuth ? <button onClick={() => {
-          dispatch(logout());
-          navigate("/");
-        }}>logout</button> : null}
-      </header>
 
 
       <Navbar />
@@ -48,13 +43,16 @@ function App() {
         <Route path="/userName" element={<UserName />} />
         <Route path="/userinformation" element={<UserTopDisc />} />
         <Route path="submit" element={<TopLogin />} />
-        <Route path="admin" element={<Admin />} />
+
 
 
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
 
         <Route element={<PrivateRoute />} >
+          <Route element={<AdminRoute />} >
+            <Route path="admin" element={<Admin />} />
+          </Route>
           <Route path="/profil" element={<Profil />} />
         </Route> {""}
 
