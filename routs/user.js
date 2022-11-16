@@ -121,12 +121,12 @@ router.put("/:id", async (req, res) => {
     console.log(error);
   }
 });
-router.delete("/:id", async (req, res) => {
+router.delete("/delete/:id", async (req, res) => {
   try {
     let result = await User.findOneAndRemove({
       _id: req.params.id,
     });
-    res.send({ msg: " delete message" });
+    res.send({ msg: " delete user" });
   } catch (error) {
     console.log(error);
     res.send({ msg: "fail" });

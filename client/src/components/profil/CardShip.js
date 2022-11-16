@@ -23,7 +23,7 @@ console.log(ship)
     <div className='infoOrder' onClick={()=> setShow(!show)}>
      <p1><b>Company: {ship?.company}</b></p1>
      <p1>Phone: {ship?.phone}</p1>
-     <p1>Date: 20/21/2019</p1>
+     <p1>Date: {ship?.createdAt}</p1>
      <p1>Etat: Pending</p1>
     </div>
     {show?
@@ -38,6 +38,8 @@ console.log(ship)
     </div>
     <p>Message: {ship?.message}</p>
     <p>Date Pick Up : {ship?.pickup}</p>
+    <p>Date Update : {ship?.updatedAt}</p>
+
     <div className='btn_profil'>
      <button onClick={() => 
                 handleDelete(ship?._id) }>Delete</button>

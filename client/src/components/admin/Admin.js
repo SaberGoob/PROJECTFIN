@@ -19,12 +19,12 @@ const Profile = () => {
   const ships = useSelector(state => state.ship?.ship)
   const users = useSelector((state) => state.user?.users);
   console.log(ships)
-  const [selectedUser, setSelectedUser] = useState(users[0]?._id)
+  const [selectedUser, setSelectedUser] = useState(users[0])
 
   const [ping, setPing] = useState(false);
 
-  const handleDelete = (_id) => {
-    dispatch(deleteUser(_id));
+  const handleDelete = (id) => {
+    dispatch(deleteUser(id));
     setPing(!ping);
   };
 
@@ -57,15 +57,17 @@ const Profile = () => {
           <div className='deleteoj'> 
           <h4>Do you want to Delete this User?</h4> 
            <button className='deleteuser' onClick={() => 
-                handleDelete(users?._id) }>Delete</button>
+                handleDelete(selectedUser?._id) }>Delete</button>
           </div>
 
           <div className='user_name_email'> 
-          
+          <p2>Name:{selectedUser?.name}</p2>
+            <p2>Last name:{selectedUser?.lastname}</p2>
+            <p2>Email:{selectedUser?.email}</p2>
 
           </div>
       
-          {ships?.filter(el => el?.userId === selectedUser).map((ship, i) =>
+          {ships?.filter(el => el?.userId === selectedUser?._id).map((ship, i) =>
             <div>
               <CardShip ship={ship} />
 
