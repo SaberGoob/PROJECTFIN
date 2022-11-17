@@ -1,11 +1,10 @@
 import ImageSlider from "./ImageSlider";
+import React from "react";
 const Sliders = () => {
   const slides = [
-    { url: "http://localhost:3000/image-1.jpg", title: "beach" },
-    { url: "http://localhost:3000/image-2.jpg", title: "boat" },
-    { url: "http://localhost:3000/image-3.jpg", title: "forest" },
-    { url: "http://localhost:3000/image-4.jpg", title: "city" },
-    { url: "http://localhost:3000/image-5.jpg", title: "italy" },
+    { url: "http://localhost:3000/truck1.png", title: "beach" },
+    { url: "http://localhost:3000/truck2.png", title: "boat" },
+    { url: "http://localhost:3000/truck3.png", title: "forest" },
   ];
   const containerStyles = {
     width: "500px",
