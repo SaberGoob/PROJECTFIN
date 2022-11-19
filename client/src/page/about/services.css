@@ -1,0 +1,21 @@
+.trucking_sv{
+    margin-top: -70px;
+}
+
+.trucking_sv h1{
+text-align: center; 
+margin-bottom: 20px;
+  }
+
+
+.truck_services{
+    width: 70%;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.trucking_min{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}

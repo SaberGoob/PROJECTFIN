@@ -14,8 +14,8 @@ const NavbarMin = () => {
 <ul className='navbarmenu'>
     <Link to='/'><il >HOME</il></Link>
     <Link to='/about'><il>ABOUT US</il></Link>
-    <il>TRANSPORTATION SERVICES</il>
-    <il>LOAD TRACKING</il>
+   <Link to='/services'><il>TRANSPORTATION SERVICES</il></Link> 
+ <Link to='trucking_live'><il>LOAD TRACKING</il></Link>   
     <Link to='/submit'><il>SHIP WITH US</il></Link> 
     <il>DRIVE FOR US</il>
     <il>FAQs</il>

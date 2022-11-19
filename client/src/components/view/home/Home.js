@@ -12,8 +12,10 @@ const Home = () => {
         <div className='home'>
             <div className='header'>
                 <div className='titleheader'>
-                <h1 className='tite-header1'>
-                    Live Freight Track Available</h1>
+
+                    <Link to='/trucking_live'><h1 className='tite-header1'>
+                    Live Freight Track Available</h1></Link>
+                
                     <Link to='./submit'>
                 <h1 className='tite-header2'>
                 Shiping With Us Right Now!

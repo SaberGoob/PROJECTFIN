@@ -21,6 +21,8 @@ import AdminRoute from './routes/AdminRoute';
 import About from './page/About';
 import Thanks from './components/contact/Thanks';
 import TopDisc from './components/user/TopDiscUser';
+import Services from './page/Services';
+import LiveTruck from './page/LiveTruck';
 
 
 function App() {
@@ -44,6 +46,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/userName" element={<UserName />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/trucking_live" element={<LiveTruck />} />
+
         
         <Route path="/userinfomation" element={<TopDisc />} />
 

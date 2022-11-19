@@ -1,0 +1,31 @@
+.truck_services_lv{
+width: 100%;
+
+display: flex;
+}
+
+.trucking_lv{
+    width: 70%;
+    margin-left: auto;
+margin-right: auto;
+margin-bottom: 50px;
+
+}
+
+.trucking_lv h1{
+ margin-bottom: 20px;
+ margin-left: 10px;
+
+}
+
+.truck_services_lv img{
+    width: 40%;
+    margin: 10px;
+
+}
+
+.truck_services_lv p1{
+
+    margin: 10px;
+
+}
