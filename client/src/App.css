@@ -3,6 +3,10 @@
   margin: 0px;
 }
 
+.App{
+  background-color: white;
+}
+
 body {
   background: rgb(249, 249, 249) !important;
 }

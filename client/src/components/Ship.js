@@ -83,15 +83,20 @@ const Add = () => {
    
 
       
-    <div className="ship">
+    <div>
        {isAuth
       ? <>
       
-    <div>
+    <div className="ship">
  
     <div className="login__form" onSubmit={(e) => e.preventDefault()}>
         <h1>INTERESTED IN SHIPPING WITH Mongoose?</h1>
-        <h5>Use the form below to contact us for a quote.</h5>
+        <h5>Use the form below to contact us for a quote.
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </h5>
 
         <input
           type="name"
@@ -134,65 +139,24 @@ const Add = () => {
         />
         </div>
       
-<h2>TRANSPORTATION (CHECK ALL THAT APPLY)</h2>
+      <div className="option_message">
+<h2>Transportation Methode option</h2>
 <div className="checkBox">
-  {/* <div className="checkBox1">
-       <h3>Flatbed</h3>
-         <input
-          type="checkbox"
-          value="Flatbed"
-          onChange={(e) => setCheckBox(e.target.value)}
-        />
-        <h3>Cargo Van Loads</h3>
-         <input
-          type="checkbox"
-          value="Cargo Van Loads"
-          onChange={(e) => setCheckBox1(e.target.value)}
-        /> 
-         <h3>Double Deck</h3>
-         <input
-          type="checkbox"
-          value="Double Deck"
-          onChange={(e) => setCheckBox2(e.target.value)}
-        />        
-        </div>
+     <select  onChange={(e) => setShip({...add, methode:e.target.value})}>
+        <option selected value="Zone2">Car</option>
+        <option>Truck</option>
+        <option>Camion</option>
+        <option>Bus</option>
+      </select>
 
-        <div className="checkBox2">
-
-         <h3>Refridgerated</h3>
-         <input
-          type="checkbox"
-          value="Refridgerated"
-          onChange={(e) => setCheckBox3(e.target.value)}
-        />
-        <h3> Dry Van</h3>
-         <input
-          type="checkbox"
-          value="Dry Van"
-          onChange={(e) => setCheckBox4(e.target.value)}
-        />
-           <h3>Stepdeck</h3>
-         <input
-          type="checkbox"
-          value="Stepdeck"
-          onChange={(e) => setCheckBox5(e.target.value)}
-        />
-        </div> */}
-
-     {/* </div> */}
-     <h3 className="zoneText">ZONE</h3>
-     <select >
-  <option value="Zone0">Z0</option>
-  <option value="Zone1">Z1</option>
-  <option selected value="Zone2">Z2</option>
-  <option value="Zone3">Z3</option>
-</select>
 <input style={{padding: 30}}
           type="text"
           name="message"
           placeholder="Message"
           onChange={(e) => setShip({...add, message:e.target.value})}
         />  
+</div>
+
         <button type="submit" className="submit__btn"
         onClick={()=> {
         dispatch(addShip(add));
@@ -206,15 +170,14 @@ const Add = () => {
         >
           Submit
         </button>
-      </div>    </div>
+      </div>
+      </div>
      
       </>
       
       : <Link to="/login">
         <button className='login1' type='button'>LOGIN NOW</button>
         </Link>}
-
-
      
    </div>
   );

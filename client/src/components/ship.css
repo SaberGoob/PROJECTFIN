@@ -1,4 +1,5 @@
 .ship {
+  margin-top: -100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,6 +13,7 @@
   font-family: 'roc-grotesk-wide', sans-serif;
   font-size: 13px;
   color: #f0c52f;
+  text-align: center;
 }
 select {
   color: #292b2c;
@@ -34,9 +36,10 @@ flex-direction: column;
 }
 .inputMin{
   display: flex;
-  width: 100%;
+  width: 50%;
   gap: 0 30px;
   flex-wrap: wrap;
+  margin-left: 40px;
 
 
 }
@@ -113,7 +116,7 @@ line-height: 1.2;
 }
 
 .submit__btn{
-  width: 50%;
+  width: 20%;
   height: 50px;
   padding: 10px;
   border-radius: 5px;
@@ -161,4 +164,18 @@ display: flex;
   margin-top: -700px;
 width: 300px;
 margin-bottom: 20px;
+}
+
+
+.option_message{
+  width: 100%;
+margin-left: 800px;
+}
+.option_message select{
+  width: 25%;
+}
+.option_message input {
+width: 40%;
+height: 50px;
+
 }

@@ -4,12 +4,16 @@ import about2 from './about2.jpg';
 import about3 from './about3.jpg';
 import about4 from './about4.jpg';
 import './about.css'
+import TopDisc from '../components/TopDisc/TopDisc';
 
 
 
 
 const About = () => {
     return (
+        <div className='bgabout'>
+        <TopDisc/>
+
         <div className='about'>
             <div>
             <h2>Expedited Trucking Company in USA</h2>
@@ -45,6 +49,7 @@ const About = () => {
 </div>
 
             </div>
+        </div>
         </div>
     )
 }
