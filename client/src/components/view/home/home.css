@@ -1,9 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+
 .header{
     background-image: url("./bg-3.gif");
     background-size: 100%;
     background-color: #cccccc;
     width: 100%;
-    height: 550px;
+    height: 600px;
     font-family: 'roc-grotesk', sans-serif;
     font-weight: bold;
     font-size: 14px;
@@ -81,7 +87,7 @@ margin-bottom: 4px; }
     border-radius: 7px;
     padding: 30px 28px 20px;
     transition: all 0.5s linear;
-    font-family: 'SupDelivery', sans-serif;
+    font-family: 'Mongoose', sans-serif;
     letter-spacing: 2px;
     color: #1e1e1e;
     text-align: left;
@@ -133,4 +139,105 @@ margin-left: 58px;}
     justify-content: center;
     margin-top: 100px;
 
+
 }
+
+.services_section {
+    margin-top: -150px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 60px;
+    margin-left: -43px;
+  
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.row{
+    display: flex;
+    margin-left: 100px;
+    text-align: center;
+
+}
+
+.row p {
+    padding: 50px;
+}
+
+#simpleimage-2{
+    background-color: #f0c52f;
+    color: black;
+}
+#simpleimage-3{
+    background-color: #f5c720;
+    color: black;
+}
+
+#simpleimage-4{
+    background-color: #1e1e1e;
+    color: white;
+
+}
+
+#simpleimage-5{
+    background-color: #000000;
+    color: white;
+
+}
+
+.MinDiscLeft1{
+    margin-top: 30px;
+    margin-left:200px;
+    width: 70%;
+    line-height: 30px;
+    text-align: left;
+
+}
+
+.lineMinLeft1{
+    width: 495px;
+    height: 3px;
+    background-color: #f0c52f;
+    margin-top: 20px;
+    margin-left: 283px;
+}
+
+.MinDiscLeft1 p {
+
+    margin-top: 15px;
+    font-size: 20px;
+    text-align: center;
+
+    line-height: 25px;
+    font-weight: 500;
+}
+.MinDiscLeft1 h1 {
+
+    text-align: center;
+}
+
+
+
+.photo_desc{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+.photo_1{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo_1 img {
+    width: 100%;
+    margin-top: 50px; 
+}
+
+

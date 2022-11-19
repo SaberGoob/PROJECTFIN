@@ -15,16 +15,16 @@ const TopDisc = () => {
              like integrity, honesty, and transparent communication with stakeholders, 
              including shippers just like you?<br/><br/>
 
-That’s the way SupDelivery Freight Solutions has always worked 
+That’s the way Mongoose Freight Solutions has always worked 
 — and it’s how we build strategic partnerships with every shipper we’re privileged to serve. We guarantee swift results and pledge to always remain flexible to serve our customers’ needs.</p>
 
         </div>
         <div className='MinDiscLeft'> 
          <p>Are you ready to leverage the benefit of working
-            with SupDelivery Freight Solutions freight transportation
+            with Mongoose Freight Solutions freight transportation
             shippers to get your freight where it needs to go, on time,
             on budget, and in perfect condition? Get started today.
-            Get your SupDelivery Freight Solutions shipper packet today!</p><Link to='/login'> <button className='btnMinDisc'>LOGIN</button></Link>
+            Get your Mongoose Freight Solutions shipper packet today!</p><Link to='/login'> <button className='btnMinDisc'>LOGIN</button></Link>
         </div>
        
 

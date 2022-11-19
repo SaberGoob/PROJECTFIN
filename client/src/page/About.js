@@ -34,12 +34,15 @@ const About = () => {
                 Our unwavering focus is on transporting your freight on time and safely. We feature competitive rates and superior customer service. A live customer representative is available 24 hours a day to answer all our customers’ queries while we offer real-time live tracking to ensure you stay updated on the status of any shipment.
             </p>
             </div>
-            <div>
+            <div className='about_img'>
+                <div>
             <img src={about1}/>
             <img src={about2}/>
+            </div>
+            <div>
             <img src={about3}/>
             <img src={about4}/>
-
+</div>
 
             </div>
         </div>

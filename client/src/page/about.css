@@ -4,3 +4,22 @@
     margin-right: auto;
 width: 72%;
 }
+
+
+.about_img{
+    margin-top: 30px;
+    width: 90%;
+    justify-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about_img img{
+    width: 40%;
+    flex-wrap: wrap;
+    margin: 10px;
+
+}

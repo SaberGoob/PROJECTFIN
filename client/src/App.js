@@ -19,6 +19,8 @@ import { allShip } from './js/userSlice/shipSlice';
 import Admin from './components/admin/Admin'
 import AdminRoute from './routes/AdminRoute';
 import About from './page/About';
+import Thanks from './components/contact/Thanks';
+import TopDisc from './components/user/TopDiscUser';
 
 
 function App() {
@@ -42,7 +44,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/userName" element={<UserName />} />
-        <Route path="/userinformation" element={<UserTopDisc />} />
+        
+        <Route path="/userinfomation" element={<TopDisc />} />
+
+        <Route path="/thanks" element={<Thanks />} />
         <Route path="submit" element={<TopLogin />} />
 
 

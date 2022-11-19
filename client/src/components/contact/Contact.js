@@ -61,7 +61,7 @@ const Contact = () => {
             onChange={onChange}
           />
         ))}
-        <Link to='./userinformation'><button id='contactus1'>Submit</button></Link>       
+        <Link to='./thanks'><button id='contactus1'>Submit</button></Link>       
       </form>
     </div>
   );

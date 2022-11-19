@@ -80,7 +80,7 @@ const Add = () => {
     <div className="ship">
       
       <div className="login__form" onSubmit={(e) => e.preventDefault()}>
-        <h1>INTERESTED IN SHIPPING WITH SUPDELIVERY?</h1>
+        <h1>INTERESTED IN SHIPPING WITH Mongoose?</h1>
         <h5>Use the form below to contact us for a quote.</h5>
 
         <input

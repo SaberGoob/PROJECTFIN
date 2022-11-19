@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const Mongoose = require("Mongoose");
 
-const Schema = mongoose.Schema;
+const Schema = Mongoose.Schema;
 const ShipSchema = new Schema({
 //   name: {
 //     type: String,
@@ -57,4 +57,4 @@ company: {
     type: String,
   },
 },{timestamps:true});
-module.exports = mongoose.model("Ship", ShipSchema);
+module.exports = Mongoose.model("Ship", ShipSchema);
