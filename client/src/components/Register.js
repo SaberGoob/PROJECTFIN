@@ -51,7 +51,8 @@ const Register = () => {
        required=""
        onChange={(e) => setRegister({...register, password:e.target.value})}
        />   
-
+<p>you Already have account? Login Now</p>
+<div className='btn_log_reg'>
       <button className="btn btn-lg btn-primary btn-block"
        onClick={() =>{ dispatch(userRegister(register)
         );
@@ -60,7 +61,8 @@ const Register = () => {
         }, 400);
         }}>Register</button>
 
-       <h5>you Already have account</h5><Link to="/login"> sign in</Link>   
+       <Link to="/login"><button>Login</button> </Link>
+        </div>  
     </div>
   </div></div>
   )

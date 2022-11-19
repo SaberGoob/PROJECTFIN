@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom'
 import { userLogin } from '../js/userSlice/userSlice';
-
+import './login.css'
 const Login = () => {
     const [login, setLogin] = useState({
 
@@ -11,7 +11,7 @@ const Login = () => {
     const dispatch = useDispatch();
     let navigate = useNavigate();
   return (
-    <div>
+    <div className='login_pad'>
           <div className="wrapper">
     <div className="form-signin"
     onSubmit={(e)=>e.preventDefault}>       
@@ -31,10 +31,10 @@ const Login = () => {
        placeholder="Password" 
        required=""
        onChange={(e) => setLogin({...login, password:e.target.value})}
-       />      
-      <label className="checkbox">
-        <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"/> Remember me
-      </label>
+       />   
+          <p>You dont have Account register Now!</p>
+
+   <div className='btn_log_reg'>
       <button className="btn btn-lg btn-primary btn-block" type="submit"
       onClick={()=> {
         dispatch(userLogin(login));
@@ -42,7 +42,9 @@ const Login = () => {
           navigate("/profil");
         }, 800);
       }}>Login</button> 
-      <h5>you dont have account ?</h5><Link to="/register"> Register Now</Link>   
+
+      
+      <Link to="/register"><button>Register</button> </Link></div>   
   
     </div>
   </div>

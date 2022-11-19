@@ -1,0 +1,11 @@
+.btn_log_reg{
+    display: flex;
+}
+
+.btn_log_reg button{
+  margin: 10px;
+}
+
+.login_pad{
+    margin: 50px;
+}
