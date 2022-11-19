@@ -23,6 +23,8 @@ import Thanks from './components/contact/Thanks';
 import TopDisc from './components/user/TopDiscUser';
 import Services from './page/Services';
 import LiveTruck from './page/LiveTruck';
+import Driveforus from './page/Driveforus';
+import FAQs from './page/FAQs';
 
 
 function App() {
@@ -49,10 +51,13 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/trucking_live" element={<LiveTruck />} />
 
-        
+        <Route path="/faqs" element={<FAQs />} />
+
         <Route path="/userinfomation" element={<TopDisc />} />
 
         <Route path="/thanks" element={<Thanks />} />
+        <Route path="/drive_for_us" element={<Driveforus />} />
+
         <Route path="submit" element={<TopLogin />} />
 
 

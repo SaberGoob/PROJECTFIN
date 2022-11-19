@@ -17,8 +17,8 @@ const NavbarMin = () => {
    <Link to='/services'><il>TRANSPORTATION SERVICES</il></Link> 
  <Link to='trucking_live'><il>LOAD TRACKING</il></Link>   
     <Link to='/submit'><il>SHIP WITH US</il></Link> 
-    <il>DRIVE FOR US</il>
-    <il>FAQs</il>
+    <Link to='drive_for_us'><il>DRIVE FOR US</il></Link>
+   <Link to='/faqs'><il>FAQs</il></Link> 
     {/* <il><img src={search} alt="search" className='searchIcon'/></il> */}
 
 </ul>
