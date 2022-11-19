@@ -1,7 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import Ship from '../Ship'
 
 const TopDisc = () => {
+
   return (
 
     <div >
@@ -24,7 +27,9 @@ That’s the way Mongoose Freight Solutions has always worked
             with Mongoose Freight Solutions freight transportation
             shippers to get your freight where it needs to go, on time,
             on budget, and in perfect condition? Get started today.
-            Get your Mongoose Freight Solutions shipper packet today!</p><Link to='/login'> <button className='btnMinDisc'>LOGIN</button></Link>
+            Get your Mongoose Freight Solutions shipper packet today!</p>
+            
+                
         </div>
        
 

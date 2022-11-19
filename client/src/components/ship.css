@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
   align-items: center;
-  margin-top:200px;
-  margin-bottom: 250px;
   font-family: 'Mongoose', sans-serif;
   background-color: white;
 
@@ -51,7 +48,6 @@ width: 355px;
   display: flex;
   flex-direction: column;
   width: 47%;
-margin-top: 0px;
 }
 
 .ship > h1 {
@@ -116,7 +112,7 @@ line-height: 1.2;
   display: block;
 }
 
-.ship button{
+.submit__btn{
   width: 50%;
   height: 50px;
   padding: 10px;
@@ -159,4 +155,10 @@ input[type=checkbox] {
 
 .checkBox1,.checkBox2{
 display: flex;
+}
+
+.login1{
+  margin-top: -700px;
+width: 300px;
+margin-bottom: 20px;
 }

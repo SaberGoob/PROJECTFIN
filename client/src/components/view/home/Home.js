@@ -14,9 +14,10 @@ const Home = () => {
                 <div className='titleheader'>
                 <h1 className='tite-header1'>
                     Live Freight Track Available</h1>
+                    <Link to='./submit'>
                 <h1 className='tite-header2'>
                 Shiping With Us Right Now!
-                </h1>
+                </h1></Link>
                 </div>
             </div>
 
@@ -48,7 +49,9 @@ Service</p>
 
 </div>
 <div className='photo_1'>
-<img src={homepic1}/>
+{/* <img src={homepic1}/> */}
+<p>See now Our History as International Transportation Company "SUPDELIVERY"</p>
+<Link to='./about'><button >About Us</button></Link>
 
 </div>
 

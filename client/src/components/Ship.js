@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ship.css";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { addShip } from '../js/userSlice/shipSlice';
 
 
@@ -76,10 +76,20 @@ const Add = () => {
 
   const dispatch = useDispatch();
   let navigate = useNavigate();
+
+  const isAuth = localStorage.getItem("token");
+
   return (
-    <div className="ship">
+   
+
       
-      <div className="login__form" onSubmit={(e) => e.preventDefault()}>
+    <div className="ship">
+       {isAuth
+      ? <>
+      
+    <div>
+ 
+    <div className="login__form" onSubmit={(e) => e.preventDefault()}>
         <h1>INTERESTED IN SHIPPING WITH Mongoose?</h1>
         <h5>Use the form below to contact us for a quote.</h5>
 
@@ -196,7 +206,16 @@ const Add = () => {
         >
           Submit
         </button>
-      </div>
+      </div>    </div>
+     
+      </>
+      
+      : <Link to="/login">
+        <button className='login1' type='button'>LOGIN NOW</button>
+        </Link>}
+
+
+     
    </div>
   );
 };
