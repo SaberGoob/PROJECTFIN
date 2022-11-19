@@ -25,7 +25,7 @@ const About = () => {
 
                 Contact our trucking company online or by phone at 888-802-5722 to learn more about our trucking services and request a quote.</p>
 
-            <h3>Our Specialized Services: Dedicated & Expedited Trucking Solutions</h3>
+            <h2>Our Specialized Services: Dedicated & Expedited Trucking Solutions</h2>
             <p>
                 From efficient expedited trucking services to dedicated freight transportation, we offer a comprehensive range of solutions for shippers. We specialize in:<br />
                 <br />
