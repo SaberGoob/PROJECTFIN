@@ -154,7 +154,7 @@ const initialState = {
           },
           [updateShip.fulfilled]: (state, action) => {
             state.status = "success";
-            state.ship = action.payload?.ship;
+            // state.ship = action.payload?.ship;
           },
           [updateShip.rejected]: (state) => {
             state.status = "failed";
@@ -165,7 +165,7 @@ const initialState = {
           },
           [deleteShip.fulfilled]: (state, action) => {
             state.status = "success";
-            state.ship = action.payload?.ship;
+            // state.ship = action.payload?.ship;
           },
           [deleteShip.rejected]: (state) => {
             state.status = "failed";

@@ -2,7 +2,7 @@ import React from 'react'
 
 import './usercard.css'
 
-const UserCard = ({ user, setSelectedUser }) => {
+const UserCard = ({ user, setSelectedUser,ping,setPing }) => {
   console.log(user)
 
   return (

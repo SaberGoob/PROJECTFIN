@@ -1,52 +1,38 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import icon_profil from '../images/icon_profil.png';
 import './admin.css';
-import { allShip, deleteShip } from '../../js/userSlice/shipSlice';
 
 
-import { deleteUser, getUser, userCurrent } from '../../js/userSlice/userSlice';
+import { deleteUser, getUser } from '../../js/userSlice/userSlice';
 import CardShipAdmin from './CardShipAdmin';
 import UserCard from './UserCard';
 
 const Profile = () => {
   const isAuth = localStorage.getItem("token");
+  const [ping, setPing] = useState(false)
 
+  
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getUser())
-  }, [])
+  }, [ping])
   const ships = useSelector(state => state.ship?.ship)
   const users = useSelector((state) => state.user?.users);
   console.log(ships)
   const [selectedUser, setSelectedUser] = useState(users[0])
-
-  const [ping, setPing] = useState(false);
 
   const handleDelete = (id) => {
     dispatch(deleteUser(id));
     setPing(!ping);
   };
 
-  // let usersSection = document.querySelector(".ship-section");
-  // function showHideUsers(){
-  //   usersSection.classList.toggle("hide");
-  // }
-
   return (
     <div className='profilship'>
       <div className='profil'>
-        {/* <h1>Company {ship ? ship.company: <h1>Loading...</h1>} </h1> */}
-        {/* <h1>this my profile {ship? ship.company: <h1>Loading...</h1>}</h1>  */}
         <div className='profil_columAdmin'>
           <div className='userInformationAdmin'>
-            {/* <p2>Name:{user?.name}</p2>
-        <p2>Last name:{user?.lastname}</p2>
-        <p2>Email:{user?.email}</p2>
-        <p1>Do you Want to change your Password?</p1>
-        <button>Update</button> */}
             <div>
-             {users?.map((user,i)=><UserCard setSelectedUser={setSelectedUser} key={i} user={user} />)} 
+             {users?.map((user,i)=><UserCard setSelectedUser={setSelectedUser} key={i} user={user}  />)} 
             </div>
 
 
@@ -69,7 +55,7 @@ const Profile = () => {
       
           {ships?.filter(el => el?.userId === selectedUser?._id).map((ship, i) =>
             <div>
-              <CardShipAdmin ship={ship} />
+              <CardShipAdmin ship={ship} ping={ping} setPing={setPing} />
 
             </div>
           )}

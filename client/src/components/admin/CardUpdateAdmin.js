@@ -4,14 +4,15 @@ import { useLocation } from 'react-router-dom'
 import './profil.css';
 import { deleteShip, updateShip } from '../../js/userSlice/shipSlice';
 
-const CardUpdate = ({ship,show,setShow}) => {
+const CardUpdate = ({ship,show,setShow,setUpdate,ping,setPing}) => {
 
-  const [ping, setPing] = useState(false);
     const [newShip, setNewShip] = useState({})
     const dispatch = useDispatch()
 
     const handleChange = (id) => {
       dispatch(updateShip({ id, ship: newShip }));
+      setPing(!ping);
+      setUpdate(false);
   
   };
   
@@ -21,7 +22,6 @@ const CardUpdate = ({ship,show,setShow}) => {
 
   return (
     <div>
-  {/* {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=> */}
     <div className='ship_colum'>
     <div className='infoOrder'  onClick={()=> setShow(!show)}>
      

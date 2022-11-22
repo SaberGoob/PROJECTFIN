@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch} from 'react-redux';
 import './profil.css';
 import { deleteShip } from '../../js/userSlice/shipSlice';
 import CardUpdateAdmin from './CardUpdateAdmin';
 
-const CardShip = ({ship}) => {
+const CardShip = ({ship, ping,setPing}) => {
   const [show, setShow]= useState(false)
   const [update, setUpdate] = useState(false)
   
   const dispatch =useDispatch()
-      const [ping, setPing] = useState(false);
   
   const handleDelete = (id) => {
     dispatch(deleteShip(id));
     setPing(!ping);
+    setUpdate(false);
+
   };
 console.log(ship)
   return (
-   update ? <CardUpdateAdmin show={show} setShow={setShow} setUpdate={setUpdate} ship={ship}/> : <div>
-  {/* {ships?.filter(el=>el?.userId===user?._id).map((ship,i)=> */}
+   update ? <CardUpdateAdmin show={show} setShow={setShow} setUpdate={setUpdate} ship={ship} ping={ping} setPing={setPing} /> : <div>
     <div className='ship_colum'>
     <div className='infoOrder' onClick={()=> setShow(!show)}>
      <p1><b>Company: {ship?.company}</b></p1>
@@ -49,8 +49,6 @@ console.log(ship)
    </div>
    :null}
    </div>
-    {/* )} */}
-
     </div>
   )
 }

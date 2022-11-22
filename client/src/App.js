@@ -3,9 +3,9 @@ import './App.css';
 import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Register from './components/Register';
 import Login from './components/Login';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { logout, userCurrent } from './js/userSlice/userSlice';
+import userSlice, { logout, userCurrent,us } from './js/userSlice/userSlice';
 import Profil from './components/profil/Profil';
 import PrivateRoute from './routes/PrivateRoute';
 import Footer from './components/footer/Footer';
@@ -28,17 +28,22 @@ import FAQs from './page/FAQs';
 
 
 function App() {
+  const [ping, setPing] = useState(false)
 
 
   const navigate = useNavigate();
   const isAuth = localStorage.getItem("token");
   const dispatch = useDispatch();
+
   useEffect(() => {
     if (isAuth) {
       dispatch(userCurrent());
     }
     dispatch(allShip())
-  }, [])
+  }, [ping])
+
+
+
   return (
     <div className="App">
 
@@ -73,7 +78,7 @@ function App() {
           <Route element={<AdminRoute />} >
             <Route path="admin" element={<Admin />} />
           </Route>
-          <Route path="/profil" element={<Profil />} />
+          <Route path="/profil" element={<Profil setPing={setPing} ping={ping} />} />
         </Route> {""}
 
       </Routes>
